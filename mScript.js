@@ -1,3 +1,4 @@
+alert("1. I made this Music Player for Practice Purpose 😊" +"\n"+ "2. This Music Player have only 5 songs 😅 " + "\n" + "3. AutoChange feature is not included 😕" +"\n"+ "4. Do Comment about this work 😇");
 const music = document.querySelector("audio");
         const img = document.querySelector("img");
         const play = document.getElementById("play");
