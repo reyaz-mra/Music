@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="mStyle.css">
+     <title>Music Player</title>
+    
+</head>
+<body>
+<div class="main-div">
+    <div class="music-container">
+        <h2 id="title">KABIL</h2>
+        <h3 id="artist">Jubin Nautiyal</h3>
+        <div class="image-container">
+            <img src="images/music-1.jpg" alt="Kabil">
+        </div>
+        <audio src="music/music-1.mp3"></audio>
+        
+        <!--Controls-->
+        <div class="music-control">
+            <i class="fas fa-backward" id="prev" title="previous"></i>
+            <i class="fas fa-play main-button" id="play" title="play"></i>
+            <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+    </div>
+</div>
+
+    <!--<script>
+        const music = document.querySelector("audio");
+        const img = document.querySelector("img");
+        const play = document.getElementById("play");
+        const artist = document.getElementById("artist");
+        const title = document.getElementById("title");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+
+        const songs = [
+            {
+                name: "music-1",
+                title: "KAABIL",
+                artist: "Jubin Nautiyal",
+            },
+            {
+                name: "music-2",
+                title: "Lut Gaye",
+                artist: "Jubin Nautiyal",
+            },
+            {
+                name: "music-3",
+                title: "Kuch To Bata",
+                artist: "Jubin Nautiyal",
+            },
+        ];
+
+
+
+        let isPlaying = false;
+
+        //for play
+        const playMusic = () => {
+            isPlaying = true;
+            music.play();
+            play.classList.replace("fa-play","fa-pause");
+        
+        };
+
+            // for pause
+        const pauseMusic = () => {
+            isPlaying = false;
+            music.pause();
+            play.classList.replace("fa-pause","fa-play");
+    
+        };
+
+        play.addEventListener("click", () =>{
+            if(isPlaying){
+                pauseMusic();
+            }else{
+                playMusic();
+            }
+        });
+
+        //Changing the music data
+
+        const loadSong = (songs) => {
+            title.textContent = songs.title;
+            artist.textContent = songs.artist;
+
+            music.src = "music/" + songs.name + ".mp3";
+            img.src = "images/" + songs.name + ".jpg";
+        };
+        songsIndex = 0;
+        //loadSong(songs[2]);
+        const nextSong = () =>{
+            songsIndex = (songsIndex + 1)%songs.length;
+            loadSong(songs[songsIndex]);
+            playMusic();
+        };
+
+        const prevSong = () =>{
+            songsIndex = (songsIndex - 1+songs.length)%songs.length;
+            loadSong(songs[songsIndex]);
+            playMusic();
+        }
+
+
+        next.addEventListener('click',nextSong);
+        prev.addEventListener("click",prevSong);
+    </script>-->
+    <script src="mScript.js"></script>
+</body>
+</html>
